@@ -3,11 +3,18 @@ group :development do
   gem "binding_of_caller"
 end
 
+#při velkém načítání souborů se vykonává na pozadí task, mohu dále pokračovat aniž bych čekal
+gem 'delayed_job_active_record'
+
+
 gem 'devise'
 gem "rolify"
 gem "cancan"
 #otevírání dopisů při testování
 gem "letter_opener", :group => :development
+
+#soft delete
+gem "paranoia", "~> 2.2"
 
 #testování aplikace
 group :development, :test do
